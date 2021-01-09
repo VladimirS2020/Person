@@ -1,5 +1,6 @@
 public interface Staff {
-    public static void helpStudent(Student student) {
+    void helpStudent(Student student) { // убрал операторы public и static. ИДЕЯ теперь пишет:
+        // "Interface abstract methods cannot have body" и подчеркивает строку красным
 
     }
 

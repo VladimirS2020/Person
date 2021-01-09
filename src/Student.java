@@ -1,15 +1,15 @@
 public class Student extends Person {
     private int tasksDoneByTheStudent;
-    private int tasksDoneByAllTheStudents;
+    private static int tasksDoneByAllTheStudents;
     private Mentor mentor;
     private boolean allTheTasksAreDone;
 
-    // Конструтор для всех полей, кроме количества решенных задач (оно для каждого нового струдента равно 0)
     public Student(String name, int age, Mentor mentor, boolean allTheTasksAreDone) {
-
+        super(name, age);
+        this.mentor = mentor;
+        this.allTheTasksAreDone = allTheTasksAreDone;
     }
 
-    // метод "решить задачи". Здесь скорее всего требуется код написать как-то по-другому
     public void doTasks(int tasks, Task[] task) {
         if (allTheTasksAreDone) {
             System.out.println("Все задачи решены");
@@ -20,13 +20,14 @@ public class Student extends Person {
 
     // метод "решить задачу"
     private void doTask(Task task) {
-        while (true) { // цикл while(true) скорее всего неверен. этим циклом я попытался предусмотреть, что задание отправляется до тех пор, пока оно не будет зачтено
-            if () { // Не знаю, как прописать: "если задание проверяется автоматически"
+        while (true) {
+            if () { // как прописать в коде: "если задание проверяется автоматически"?
                 System.out.println("Задание выполнено");
                 tasksDoneByTheStudent++;
                 tasksDoneByAllTheStudents++;
+                break;
             } else {
-                Mentor.checkTask(task);
+                checkTask(task); // как написать код, чтобы метод checkTask вызывался у конкретного ментора?
             }
         }
     }

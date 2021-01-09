@@ -2,9 +2,9 @@ import java.util.Random;
 
 public class Mentor extends Person {
     static boolean mood;
-    Random random; // не уверен, что верно
+    Random random;
 
-    // Конструктор должен по умолчанию вызывать родительский конструктор и присваивать ментору хорошее настроение
+    // переменная mood в конструторе не определена. Нормально?
     public Mentor(String name, int age, boolean mood) {
         super(name, age);
     }
@@ -13,9 +13,9 @@ public class Mentor extends Person {
         System.out.println("Приободряющее сообщение");
     }
 
-    // не уверен, что верно
-    public static boolean checkTask(Task task) {
-        Random random = new Random();
+    // ИДЕЯ пишет тут 1 related problem
+    public boolean checkTask(Task task) {
+        random = new Random();
         random.nextInt();
         if (random.nextInt() > 1000) {
             mood = true;

@@ -5,6 +5,6 @@ public class DragAndDrop extends Task implements Autochecked {
     // присваивает ссылку на новый двумерный массив, заполненный значениями по вашему усмотрению
     public DragAndDrop(int number, String text, String[][] options) {
         super(number, text);
-        options = {{"aa", "ab", "ac"}, {"ba", "bb", "bc"}};
+        options = {{"aa", "ab", "ac"}, {"ba", "bb", "bc"}}; // аналогично ИДЕЯ пишет, что инициализация массива здесь невозможна и подчеркивает красным
     }
 }

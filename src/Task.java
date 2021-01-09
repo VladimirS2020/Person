@@ -3,7 +3,7 @@ public abstract class Task {
     String text;
 
     public Task(int number, String text) {
-        number = 0;
-        text = "Some text";
+        this.number = number;
+        this.text = text;
     }
 }
