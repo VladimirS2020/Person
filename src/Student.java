@@ -12,15 +12,14 @@ public class Student extends Person {
 
     public void doTasks(int tasks, Task[] task) {
         if (allTheTasksAreDone) {
-            System.out.println("Все задачи решены");
+            System.out.println("Все задачи решены"); // в задаче написано, что надо вернуть true. Я не вернул, поскольку метод void
         } else {
             System.out.println("Не все задачи решены");
+            doTask(task[tasksDoneByTheStudent++]); // в задаче написано, что надо вернуть false. Я не вернул, поскольку метод void
         }
     }
 
-    // в задаче указано, что метод должен быть private, но чтобы из класса Person иметь доступ к этому методу,
-    // я сделал этот метод public
-    public void doTask(Task task) {
+    private void doTask(Task task) {
         while (true) {
             if (task instanceof Autochecked) {
                 System.out.println("Задание выполнено");
@@ -28,7 +27,7 @@ public class Student extends Person {
                 tasksDoneByAllTheStudents++;
                 break;
             } else {
-                checkTask(task); // как написать код, чтобы метод checkTask вызывался у конкретного ментора?
+                mentor.checkTask(task);
             }
         }
     }

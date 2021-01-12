@@ -18,6 +18,7 @@ public class Mentor extends Person {
         random.nextInt();
         if (random.nextInt() > 1000) {
             mood = true;
+            System.out.println("Задача " + task + " решена правильно. Принимается");
             return true;
         } else {
             mood = false;
